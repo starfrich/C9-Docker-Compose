@@ -3,19 +3,22 @@ Deploy C9-IDE Inside Docker Container
 
 ## Provisioning Your Linux VM
 
-1. Install Docker
+1. Update & Upgrade
 ```
-apt update && apt updgrade -y
+apt update && apt upgrade -y
+```
+2. Install Docker
+```
 curl -fsSL https://get.docker.com | bash -s docker
 ```
-2. Install Docker-Compose
+3. Install Docker-Compose
 ```
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 ```
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-3. Clone Repository Ini ke dalam folder home /c9users/
+4. Clone Repository Ini ke dalam folder home /c9users/
 ```
 $ sudo adduser c9users
 $ git clone https://github.com/starfrich/C9-Docker-Compose.git /home/c9users/
@@ -24,7 +27,7 @@ $ git clone https://github.com/starfrich/C9-Docker-Compose.git /home/c9users/
 How to use ?
 
 ```
-$ sudo su #Login as root or priviledge user
+$ sudo su #Login as root or privilege user
 $ cd /home/c9users/
 $ nano .env #Edit Port, Nama pelanggan setiap kali membuat ingin user baru
 $ sudo docker-compose -p kamarudin up -d
