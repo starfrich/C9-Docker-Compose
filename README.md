@@ -5,6 +5,7 @@ Deploy C9-IDE Inside Docker Container
 
 1. Install Docker
 ```
+apt update && apt updgrade -y
 curl -fsSL https://get.docker.com | bash -s docker
 ```
 2. Install Docker-Compose
