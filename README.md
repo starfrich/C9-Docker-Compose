@@ -33,6 +33,16 @@ $ nano .env #Edit Port, Nama pelanggan setiap kali membuat ingin user baru
 $ sudo docker-compose -p kamarudin up -d
 ```
 
+After login to your c9:
+1. su -
+2. run this:
+```
+echo "deb http://deb.debian.org/debian/ buster main" | tee /etc/apt/sources.list
+echo "deb http://security.debian.org/debian-security buster/updates main" | tee -a /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian/ buster-updates main" | tee -a /etc/apt/sources.list
+```
+3. apt update && apt upgrade -y
+4. apt dist-upgrade
 ### Explanation
 
 > File .env
